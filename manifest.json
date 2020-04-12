@@ -1,0 +1,20 @@
+{
+	"manifest_version" : 2,
+	"name" : "Accupass搶票快手",
+	"description" : "An extension makes you sooner complete your form data in accupass",
+	"version" : "1.0.0",
+	"browser_action" : {
+		"default_title" : "Accupass搶票快手",
+		"default_popup": "popup.html",
+		"default_locale": "en",
+		"default_icon" : "icon.png"		 
+	},
+	"content_scripts" : [
+		{
+			"matches" : ["https://www.accupass.com/eflow/*"],
+			"js" : ["snapUp.js"]
+		}
+	],
+	"permissions" : ["activeTab"]
+}
+
